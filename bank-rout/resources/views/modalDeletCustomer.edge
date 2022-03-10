@@ -1,3 +1,8 @@
+@layout('layouts/welcome')
+
+
+@section('body')
+
 @component('components/modal')
     @slot('header')
         <h1> Delete Customer </h1>
@@ -15,4 +20,5 @@
       <button>Cancel</button>
     </div>
   @end
+@end
 @end

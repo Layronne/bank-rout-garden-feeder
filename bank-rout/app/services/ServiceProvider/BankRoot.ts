@@ -9,7 +9,7 @@ import createCustomerDto from "App/Models/DTO/createCustomerDto";
 export default class BankRootService implements BankrootInteface {
 
     getAllCustomer = async (page: number): Promise<PaginationInterface> => {
-        const limit = 9
+        const limit = 6
         let nbCunstomer = (await Customer.all()).length
         let customerArrayByPage = await Database.from(Customer.table).paginate(page, limit)
 
@@ -48,6 +48,8 @@ export default class BankRootService implements BankrootInteface {
         })
     }
 
+    // getCustomerTransfer = async (id: number): Promise
+    
     deleteCustomer = async (id: number) => {
         const customer = await Customer.findOrFail(id)
         return await customer.delete()

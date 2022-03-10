@@ -4,8 +4,8 @@ import Gender from 'App/Models/Gender'
 export default class GenderSeeder extends BaseSeeder {
   public async run () {
     Gender.createMany([
-      {typename:"male"},
       {typename:"Female"},
+      {typename:"Male"},
       {typename:"no gender"},
       {typename:"transgender"}
     ])
